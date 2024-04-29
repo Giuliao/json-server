@@ -1,0 +1,495 @@
+{
+    "app_list": [
+        {
+            "app_id": "1",
+            "app_name": "busybox"
+        },
+        {
+            "app_id": "2",
+            "app_name": "helloworld"
+        }
+    ],
+    "arch_list": [
+        {
+            "id": 1,
+            "name": "arm64",
+            "config_name": "ARCH_ARM_64",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "id": 2,
+            "name": "x86_64",
+            "config_name": "ARCH_X86_64",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        }
+    ],
+    "arch_plat_comb_list": [
+        {
+            "app_id": "1",
+            "app_name": "busybox",
+            "arch_config_name": "ARCH_ARM_64",
+            "plat_config_name": "PLAT_RASPI"
+        },
+        {
+            "app_id": "2",
+            "app_name": "helloworld",
+            "arch_config_name": "ARCH_ARM_64",
+            "plat_config_name": "PLAT_KVM"
+        },
+        {
+            "app_id": "2",
+            "app_name": "helloworld",
+            "arch_config_name": "ARCH_X86_64",
+            "plat_config_name": "PLAT_KVM"
+        },
+        {
+            "app_id": "1",
+            "app_name": "busybox",
+            "arch_config_name": "ARCH_ARM_64",
+            "plat_config_name": "PLAT_KVM"
+        },
+        {
+            "app_id": "1",
+            "app_name": "busybox",
+            "arch_config_name": "ARCH_X86_64",
+            "plat_config_name": "PLAT_KVM"
+        },
+        {
+            "app_id": "2",
+            "app_name": "helloworld",
+            "arch_config_name": "ARCH_ARM_64",
+            "plat_config_name": "PLAT_RASPI"
+        },
+        {
+            "app_id": "1",
+            "app_name": "busybox",
+            "arch_config_name": "ARCH_ARM_64",
+            "plat_config_name": "PLAT_RK3568"
+        }
+    ],
+    "deflib_list": [
+        {
+            "app_id": "1",
+            "app_name": "busybox",
+            "lib_config_name": "LIBMUSL",
+            "arch_config_name": "ARCH_ARM_64",
+            "plat_config_name": "PLAT_RASPI"
+        },
+        {
+            "app_id": "2",
+            "app_name": "helloworld",
+            "lib_config_name": "LIBUKBUS",
+            "arch_config_name": "ARCH_ARM_64",
+            "plat_config_name": "PLAT_KVM"
+        },
+        {
+            "app_id": "2",
+            "app_name": "helloworld",
+            "lib_config_name": "LIBUKSGLIST",
+            "arch_config_name": "ARCH_ARM_64",
+            "plat_config_name": "PLAT_KVM"
+        },
+        {
+            "app_id": "2",
+            "app_name": "helloworld",
+            "lib_config_name": "LIBUKBUS",
+            "arch_config_name": "ARCH_X86_64",
+            "plat_config_name": "PLAT_KVM"
+        },
+        {
+            "app_id": "2",
+            "app_name": "helloworld",
+            "lib_config_name": "LIBUKSGLIST",
+            "arch_config_name": "ARCH_X86_64",
+            "plat_config_name": "PLAT_KVM"
+        },
+        {
+            "app_id": "1",
+            "app_name": "busybox",
+            "lib_config_name": "LIBMUSL",
+            "arch_config_name": "ARCH_ARM_64",
+            "plat_config_name": "PLAT_KVM"
+        },
+        {
+            "app_id": "1",
+            "app_name": "busybox",
+            "lib_config_name": "LIBMUSL",
+            "arch_config_name": "ARCH_X86_64",
+            "plat_config_name": "PLAT_KVM"
+        },
+        {
+            "app_id": "1",
+            "app_name": "busybox",
+            "lib_config_name": "LIBMUSL",
+            "arch_config_name": "ARCH_ARM_64",
+            "plat_config_name": "PLAT_RK3568"
+        }
+    ],
+    "lib_list": [
+        {
+            "name": "musl",
+            "config_name": "LIBMUSL",
+            "description": "c标准库",
+            "category": "语言库",
+            "replace_group": "clib",
+            "depends_ons": [],
+            "selects": [
+                "LIBPOSIX_PROCESS",
+                "LIBPOSIX_FUTEX",
+                "LIBPOSIX_ENVIRON"
+            ],
+            "implies": [
+                "LIBUKMMAP"
+            ]
+        },
+        {
+            "name": "nolibc",
+            "config_name": "LIBNOLIBC",
+            "description": "最小化精简libc库",
+            "category": "语言库",
+            "replace_group": "clib",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "posix-environ",
+            "config_name": "LIBPOSIX_ENVIRON",
+            "description": "POSIX：环境变量相关接口",
+            "category": "posix接口",
+            "replace_group": "",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "posix-event",
+            "config_name": "LIBPOSIX_EVENT",
+            "description": "POSIX：polling、event相关接口",
+            "category": "posix接口",
+            "replace_group": "",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "posix-futex",
+            "config_name": "LIBPOSIX_FUTEX",
+            "description": "POSIX：futex相关系统调用，兼容linux",
+            "category": "posix接口",
+            "replace_group": "",
+            "depends_ons": [],
+            "selects": [
+                "LIBUKLOCK"
+            ],
+            "implies": []
+        },
+        {
+            "name": "posix-libdl",
+            "config_name": "LIBPOSIX_LIBDL",
+            "description": "POSIX: libdl库",
+            "category": "posix接口",
+            "replace_group": "",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "posix-mmap",
+            "config_name": "LIBPOSIX_MMAP",
+            "description": "POSIX：内存映射相关接口",
+            "category": "posix接口",
+            "replace_group": "",
+            "depends_ons": [
+                "LIBUKVMEM"
+            ],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "posix-process",
+            "config_name": "LIBPOSIX_PROCESS",
+            "description": "POSIX：进程相关功能接口",
+            "category": "posix接口",
+            "replace_group": "",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "posix-socket",
+            "config_name": "LIBPOSIX_SOCKET",
+            "description": "POSIX: socket通信相关接口",
+            "category": "posix接口",
+            "replace_group": "",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "posix-sysinfo",
+            "config_name": "LIBPOSIX_SYSINFO",
+            "description": "POSIX: 系统参数相关接口",
+            "category": "posix接口",
+            "replace_group": "",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "posix-time",
+            "config_name": "LIBPOSIX_TIME",
+            "description": "POSIX: time系统调用",
+            "category": "posix接口",
+            "replace_group": "",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "posix-user",
+            "config_name": "LIBPOSIX_USER",
+            "description": "POSIX: user相关功能",
+            "category": "posix接口",
+            "replace_group": "",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "tntty_ns8250",
+            "config_name": "LIBTNTTY_NS8250",
+            "description": "NS8250串口通信驱动",
+            "category": "串口通信",
+            "replace_group": "",
+            "depends_ons": [
+                "ARCH_ARM_64"
+            ],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "ubsan",
+            "config_name": "LIBUBSAN",
+            "description": "运行时未定义（非法）行为检测",
+            "category": "安全",
+            "replace_group": "",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "ukallocbbuddy",
+            "config_name": "LIBUKALLOCBBUDDY",
+            "description": "Binary Buddy内存分配器",
+            "category": "物理内存分配",
+            "replace_group": "memallocator",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "ukallocregion",
+            "config_name": "LIBUKALLOCREGION",
+            "description": "Region-based内存分配器",
+            "category": "物理内存分配",
+            "replace_group": "memallocator",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "ukfallocbuddy",
+            "config_name": "LIBUKFALLOCBUDDY",
+            "description": "伙伴系统页帧分配器",
+            "category": "虚拟内存管理",
+            "replace_group": "page frame allocator",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "ukintctlr_bcm_inic",
+            "config_name": "LIBUKINTCTLR_BCM_INTC",
+            "description": "BCM中断控制器",
+            "category": "中断控制器",
+            "replace_group": "",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "uk_intctlr_gic",
+            "config_name": "LIBUKINTCTLR_GIC",
+            "description": "通用中断控制器",
+            "category": "中断控制器",
+            "replace_group": "",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "uklock",
+            "config_name": "LIBUKLOCK",
+            "description": "多任务同步相关功能，包括：自旋锁、互斥锁、信号量等",
+            "category": "多任务协同",
+            "replace_group": "",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "ukmmap",
+            "config_name": "LIBUKMMAP",
+            "description": "内存映射相关系统调用",
+            "category": "虚拟内存管理",
+            "replace_group": "",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "ukschedcoop",
+            "config_name": "LIBUKSCHEDCOOP",
+            "description": "Cooperative Round-Robin scheduler",
+            "category": "调度",
+            "replace_group": "schedluer",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "uksp",
+            "config_name": "LIBUKSP",
+            "description": "栈保护：Stack Canaries",
+            "category": "安全",
+            "replace_group": "",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "uktty_ns16550",
+            "config_name": "LIBUKTTY_NS16550",
+            "description": "NS16550串口通信驱动",
+            "category": "串口通信",
+            "replace_group": "",
+            "depends_ons": [
+                "ARCH_ARM_64"
+            ],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "uktty_pl011",
+            "config_name": "LIBUKTTY_PL011",
+            "description": "PL011串口通信驱动",
+            "category": "串口通信",
+            "replace_group": "",
+            "depends_ons": [
+                "ARCH_ARM_64"
+            ],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "ukvmem",
+            "config_name": "LIBUKVMEM",
+            "description": "虚拟地址空间管理（VAS）",
+            "category": "虚拟内存管理",
+            "replace_group": "",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "9pfs",
+            "config_name": "LIBVFSCORE_ROOTFS_9PFS",
+            "description": "",
+            "category": "根文件系统",
+            "replace_group": "rootfs",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "custom",
+            "config_name": "LIBVFSCORE_ROOTFS_CUSTOM",
+            "description": "",
+            "category": "根文件系统",
+            "replace_group": "rootfs",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "einitrd",
+            "config_name": "LIBVFSCORE_ROOTFS_EINITRD",
+            "description": "",
+            "category": "根文件系统",
+            "replace_group": "rootfs",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "initrd",
+            "config_name": "LIBVFSCORE_ROOTFS_INITRD",
+            "description": "",
+            "category": "根文件系统",
+            "replace_group": "rootfs",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "name": "ramfs",
+            "config_name": "LIBVFSCORE_ROOTFS_RAMFS",
+            "description": "",
+            "category": "根文件系统",
+            "replace_group": "rootfs",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        }
+    ],
+    "plat_list": [
+        {
+            "id": 1,
+            "name": "raspi",
+            "config_name": "PLAT_RASPI",
+            "depends_ons": [
+                "ARCH_ARM_64"
+            ],
+            "selects": [
+                "LIBUKINTCTLR_BCM_INTC",
+                "LIBUKTTY_PL011"
+            ],
+            "implies": []
+        },
+        {
+            "id": 2,
+            "name": "qemu",
+            "config_name": "PLAT_KVM",
+            "depends_ons": [],
+            "selects": [],
+            "implies": []
+        },
+        {
+            "id": 4,
+            "name": "rk3568",
+            "config_name": "PLAT_RK3568",
+            "depends_ons": [
+                "ARCH_ARM_64"
+            ],
+            "selects": [
+                "LIBTNTTY_NS8250"
+            ],
+            "implies": []
+        }
+    ]
+}
