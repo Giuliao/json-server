@@ -1,0 +1,43 @@
+{
+    "arch": {
+        "name": "arm64",
+        "key": "ARCH_ARM64"
+    },
+    "app": {
+        "name": "busybox"
+    },
+    "plat": {
+        "name": "raspi",
+        "key": "PLAT_RASPI",
+        "arches": [
+            {
+                "name": "arm64",
+                "key": "ARCH_ARM64"
+            }
+        ]
+    },
+    "selects": [
+        {
+            "id": "1",
+            "name": "pl011",
+            "key": "LIBUKTTY_PL011"
+        },
+        {
+            "id": "2",
+            "name": "libb",
+            "key": "LIBB"
+        }
+    ],
+    "implies": [
+        {
+            "id": "3",
+            "name": "libc",
+            "key": "LIBC"
+        },
+        {
+            "id": "4",
+            "name": "libd",
+            "key": "LIBD"
+        }
+    ]
+}

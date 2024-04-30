@@ -1,0 +1,248 @@
+{
+    "categorys": [
+        {
+            "name": "语言库",
+            "libs": [
+                {
+                    "name": "Python",
+                    "key": "LIBPYTHON",
+                    "description": ""
+                }
+            ],
+            "groups": [
+                {
+                    "name": "C库",
+                    "libs": [
+                        {
+                            "name": "musl",
+                            "key": "LIBMUSL",
+                            "description": "c标准库"
+                        },
+                        {
+                            "name": "nolibc",
+                            "key": "LIBNOLIBC",
+                            "description": "最小化精简libc库"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "POSIX接口",
+            "libs": [
+                {
+                    "name": "posix-environ",
+                    "key": "LIBPOSIX_ENVIRON",
+                    "description": "POSIX：环境变量相关接口"
+                },
+                {
+                    "name": "posix-event",
+                    "key": "LIBPOSIX_EVENT",
+                    "description": "POSIX：polling、event相关接口"
+                },
+                {
+                    "name": "posix-futex",
+                    "key": "LIBPOSIX_FUTEX",
+                    "description": "POSIX：futex相关系统调用，兼容linux"
+                },
+                {
+                    "name": "posix-libdl",
+                    "key": "LIBPOSIX_LIBDL",
+                    "description": "POSIX: libdl库"
+                },
+                {
+                    "name": "posix-mmap",
+                    "key": "LIBPOSIX_MMAP",
+                    "description": "POSIX：内存映射相关接口"
+                },
+                {
+                    "name": "posix-process",
+                    "key": "LIBPOSIX_PROCESS",
+                    "description": "POSIX：进程相关功能接口"
+                },
+                {
+                    "name": "posix-socket",
+                    "key": "LIBPOSIX_SOCKET",
+                    "description": "POSIX: socket通信相关接口"
+                },
+                {
+                    "name": "posix-sysinfo",
+                    "key": "LIBPOSIX_SYSINFO",
+                    "description": "POSIX: 系统参数相关接口"
+                },
+                {
+                    "name": "posix-time",
+                    "key": "LIBPOSIX_TIME",
+                    "description": "POSIX: time系统调用"
+                },
+                {
+                    "name": "posix-user",
+                    "key": "LIBPOSIX_USER",
+                    "description": "POSIX: user相关功能"
+                }
+            ]
+        },
+        {
+            "name": "串口通信",
+            "libs": [
+                {
+                    "name": "tntty_ns8250",
+                    "key": "LIBTNTTY_NS8250",
+                    "description": "NS8250串口通信驱动"
+                }
+            ]
+        },
+        {
+            "name": "安全",
+            "libs": [
+                {
+                    "name": "ubsan",
+                    "key": "LIBUBSAN",
+                    "description": "运行时未定义（非法）行为检测"
+                },
+                {
+                    "name": "uksp",
+                    "key": "LIBUKSP",
+                    "description": "栈保护：Stack Canaries"
+                }
+            ]
+        },
+        {
+            "name": "物理内存分配",
+            "groups": [
+                {
+                    "name": "memallocator",
+                    "libs": [
+                        {
+                            "name": "ukallocbbuddy",
+                            "key": "LIBUKALLOCBBUDDY",
+                            "description": "Binary Buddy内存分配器"
+                        },
+                        {
+                            "name": "ukallocregion",
+                            "key": "LIBUKALLOCREGION",
+                            "description": "Region-based内存分配器"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "虚拟内存管理",
+            "libs": [
+                {
+                    "name": "ukmmap",
+                    "key": "LIBUKMMAP",
+                    "description": "内存映射相关系统调用"
+                },
+                {
+                    "name": "ukvmem",
+                    "key": "LIBUKVMEM",
+                    "description": "虚拟地址空间管理（VAS）"
+                }
+            ],
+            "groups": [
+                {
+                    "name": "page frame allocator",
+                    "libs": [
+                        {
+                            "name": "ukfallocbuddy",
+                            "key": "LIBUKFALLOCBUDDY",
+                            "description": "伙伴系统页帧分配器"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "中断控制器",
+            "libs": [
+                {
+                    "name": "ukintctlr_bcm_inic",
+                    "key": "LIBUKINTCTLR_BCM_INTC",
+                    "description": "BCM中断控制器"
+                },
+                {
+                    "name": "uk_intctlr_gic",
+                    "key": "LIBUKINTCTLR_GIC",
+                    "description": "通用中断控制器"
+                }
+            ]
+        },
+        {
+            "name": "多任务协同",
+            "libs": [
+                {
+                    "name": "uklock",
+                    "key": "LIBUKLOCK",
+                    "description": "多任务同步相关功能，包括：自旋锁、互斥锁、信号量等"
+                }
+            ]
+        },
+        {
+            "name": "调度",
+            "groups": [
+                {
+                    "name": "schedluer",
+                    "libs": [
+                        {
+                            "name": "ukschedcoop",
+                            "key": "LIBUKSCHEDCOOP",
+                            "description": "Cooperative Round-Robin scheduler"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "串口通信",
+            "libs": [
+                {
+                    "name": "uktty_ns16550",
+                    "key": "LIBUKTTY_NS16550",
+                    "description": "NS16550串口通信驱动"
+                },
+                {
+                    "name": "uktty_pl011",
+                    "key": "LIBUKTTY_PL011",
+                    "description": "PL011串口通信驱动"
+                }
+            ]
+        },
+        {
+            "name": "根文件系统",
+            "groups": [
+                {
+                    "name": "rootfs",
+                    "libs": [
+                        {
+                            "name": "9pfs",
+                            "key": "LIBVFSCORE_ROOTFS_9PFS",
+                            "description": ""
+                        },
+                        {
+                            "name": "custom",
+                            "key": "LIBVFSCORE_ROOTFS_CUSTOM",
+                            "description": ""
+                        },
+                        {
+                            "name": "einitrd",
+                            "key": "LIBVFSCORE_ROOTFS_EINITRD",
+                            "description": ""
+                        },
+                        {
+                            "name": "initrd",
+                            "key": "LIBVFSCORE_ROOTFS_INITRD",
+                            "description": ""
+                        },
+                        {
+                            "name": "ramfs",
+                            "key": "LIBVFSCORE_ROOTFS_RAMFS",
+                            "description": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

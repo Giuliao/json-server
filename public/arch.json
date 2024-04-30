@@ -1,0 +1,9 @@
+{
+    "arches": [
+        {
+            "id": "1",
+            "name": "arm64",
+            "key": "ARCH_ARM64"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "plats": [
+        {
+            "name": "raspi",
+            "key": "PLAT_RASPI",
+            "arches": [
+                {
+                    "id": "1",
+                    "name": "arm64",
+                    "key": "ARCH_ARM64"
+                }
+            ]
+        },
+        {
+            "name": "kvm-qemu",
+            "key": "PLAT_KVM",
+            "arches": [
+                {
+                    "id": "1",
+                    "name": "arm64",
+                    "key": "ARCH_ARM64"
+                }
+            ]
+        }
+    ]
+}

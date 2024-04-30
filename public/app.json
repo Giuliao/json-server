@@ -1,0 +1,12 @@
+{
+    "apps": [
+        {
+            "id": "1",
+            "name": "busybox"
+        },
+        {
+            "id": "2",
+            "name": "helloworld"
+        }
+    ]
+}

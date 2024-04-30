@@ -1,0 +1,255 @@
+{
+  "lib_deps": [
+    {
+      "name": "musl",
+      "key": "LIBMUSL",
+      "depends_ons": [],
+      "selects": [
+        {
+          "key": "LIBPOSIX_PROCESS"
+        },
+        {
+          "key": "LIBPOSIX_FUTEX"
+        },
+        {
+          "key": "LIBPOSIX_ENVIRON"
+        }
+      ],
+      "implies": [
+        {
+          "key": "LIBUKMMAP"
+        }
+      ]
+    },
+    {
+      "name": "nolibc",
+      "key": "LIBNOLIBC",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "posix-environ",
+      "key": "LIBPOSIX_ENVIRON",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "posix-event",
+      "key": "LIBPOSIX_EVENT",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "posix-futex",
+      "key": "LIBPOSIX_FUTEX",
+      "depends_ons": [],
+      "selects": [
+        {
+          "key": "LIBUKLOCK"
+        }
+      ],
+      "implies": []
+    },
+    {
+      "name": "posix-libdl",
+      "key": "LIBPOSIX_LIBDL",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "posix-mmap",
+      "key": "LIBPOSIX_MMAP",
+      "depends_ons": [
+        {
+          "key": "LIBUKVMEM"
+        }
+      ],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "posix-process",
+      "key": "LIBPOSIX_PROCESS",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "posix-socket",
+      "key": "LIBPOSIX_SOCKET",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "posix-sysinfo",
+      "key": "LIBPOSIX_SYSINFO",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "posix-time",
+      "key": "LIBPOSIX_TIME",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "posix-user",
+      "key": "LIBPOSIX_USER",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "tntty_ns8250",
+      "key": "LIBTNTTY_NS8250",
+      "depends_ons": [
+        {
+          "key": "ARCH_ARM_64"
+        }
+      ],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "ubsan",
+      "key": "LIBUBSAN",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "ukallocbbuddy",
+      "key": "LIBUKALLOCBBUDDY",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "ukallocregion",
+      "key": "LIBUKALLOCREGION",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "ukfallocbuddy",
+      "key": "LIBUKFALLOCBUDDY",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "ukintctlr_bcm_inic",
+      "key": "LIBUKINTCTLR_BCM_INTC",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "uk_intctlr_gic",
+      "key": "LIBUKINTCTLR_GIC",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "uklock",
+      "key": "LIBUKLOCK",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "ukmmap",
+      "key": "LIBUKMMAP",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "ukschedcoop",
+      "key": "LIBUKSCHEDCOOP",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "uksp",
+      "key": "LIBUKSP",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "uktty_ns16550",
+      "key": "LIBUKTTY_NS16550",
+      "depends_ons": [
+        {
+          "key": "ARCH_ARM_64"
+        }
+      ],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "uktty_pl011",
+      "key": "LIBUKTTY_PL011",
+      "depends_ons": [
+        {
+          "key": "ARCH_ARM_64"
+        }
+      ],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "ukvmem",
+      "key": "LIBUKVMEM",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "9pfs",
+      "key": "LIBVFSCORE_ROOTFS_9PFS",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "custom",
+      "key": "LIBVFSCORE_ROOTFS_CUSTOM",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "einitrd",
+      "key": "LIBVFSCORE_ROOTFS_EINITRD",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "initrd",
+      "key": "LIBVFSCORE_ROOTFS_INITRD",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    },
+    {
+      "name": "ramfs",
+      "key": "LIBVFSCORE_ROOTFS_RAMFS",
+      "depends_ons": [],
+      "selects": [],
+      "implies": []
+    }
+  ]
+}
